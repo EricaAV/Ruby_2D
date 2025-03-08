@@ -35,6 +35,8 @@ public class UIHandler : MonoBehaviour
 
     }
 
+
+
     private void Update()
     {
         if (m_TimerDisplay > 0)
@@ -49,14 +51,17 @@ public class UIHandler : MonoBehaviour
         }
     }
 
+
     public void SetHealthValue(float percentage)
     {
         m_Healthbar.style.width = Length.Percent(100 * percentage);
     }
+
 
     public void DisplayDialogue()
     {
         m_NonPlayerDialogue.style.display = DisplayStyle.Flex;
         m_TimerDisplay = displayTime;
     }
+
 }

@@ -81,12 +81,16 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+
     // FixedUpdate has the same call rate as the physics system 
     void FixedUpdate()
     {
         Vector2 position = (Vector2)rigidbody2d.position + move * speed * Time.deltaTime;
         rigidbody2d.MovePosition(position);
     }
+
+
 
     public void ChangeHealth(int amount)
     {
@@ -103,6 +107,7 @@ public class PlayerController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
+
 
     void Launch()
     {
